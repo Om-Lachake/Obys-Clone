@@ -381,12 +381,45 @@ function arrowcursorfollower(){
     });
     
 }
+
+function gooeycursor(){
+    document.addEventListener("mousemove",function(dets){
+        gsap.to("#svgcrsr",{
+            x:dets.x,
+            y:dets.y
+        })
+    })
+    let arr = ["#overdiv1", "#overdiv2", "#overdiv3", "#overdiv4"];
+
+    arr.forEach((elem)=>{
+        document.querySelector(elem).addEventListener("mouseenter",function(){
+            gsap.to("#svgcrsr",{
+                opacity: 1
+            })
+            gsap.to(".circle",{
+                opacity:0,
+                scale:0
+            })
+        })
+        document.querySelector(elem).addEventListener("mouseleave",function(){
+            gsap.to("#svgcrsr",{
+                opacity: 0
+            })
+            gsap.to(".circle",{
+                opacity:1,
+                scale:1
+            })
+        })
+    })
+}
+
 locomotiveanimation();
 loadingAnimation();
 magneticeffect();
 tailcursor();
 videocursor();
 moveflag();
+gooeycursor();
 footerAnimation();
 arrowcursorfollower();
 
