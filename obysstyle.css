@@ -781,9 +781,9 @@ body:hover .circle{
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-transform: translate(-50%,-100%);
-        -ms-transform: translate(-50%,-100%);
-            transform: translate(-50%,-100%);
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
     opacity: 0;
 }
 #hero3{
