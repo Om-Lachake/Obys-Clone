@@ -33,6 +33,17 @@ body,html{
     height: 100%;
     overflow-x: hidden;
 }
+#svgcrsr{
+    --circle-size:20vw;
+    position: absolute;
+    width: var(--circle-size);
+    left: calc(var(--circle-size)/2*-1);
+    top: calc(var(--circle-size)/2*-1);
+    pointer-events: none;
+    z-index: 99999;
+    opacity: 0;
+    mix-blend-mode: overlay;
+}
 
 .cursor {
     pointer-events: none;
